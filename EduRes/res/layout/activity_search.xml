@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:dlistView="http://schemas.android.com/apk/res/com.cqvip.edures"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray" >
+
+    <RelativeLayout
+        android:id="@+id/searchbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/et_searchbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_selector"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textSize="14sp" >
+        </EditText>
+        <ImageView
+            android:id="@+id/icon_btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4.0dip"
+            android:src="@drawable/search_clear_btn" />
+    </RelativeLayout>
+        <View
+            android:layout_below="@id/searchbar"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/main_header_bg" />
+    <LinearLayout
+        android:id="@+id/totalsearch_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchbar"
+        android:background="@color/main_header_bg">
+
+        <TextView
+            android:id="@+id/totalsearch_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="4dp"
+            android:padding="1dp"
+            android:text="记录数"
+            android:textSize="12sp" android:visibility="gone"/>
+    </LinearLayout>
+
+    <com.cqvip.edures.widget.DropDownListView
+        android:id="@+id/list_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/totalsearch_ll"
+        android:isScrollContainer="false"
+        dlistView:isAutoLoadOnBottom="true"
+        dlistView:isOnBottomStyle="true" >
+    </com.cqvip.edures.widget.DropDownListView>
+
+    <RelativeLayout
+        android:id="@+id/noresult_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/noresult_img"
+            android:gravity="center"
+            android:text="没有找到相关结果\n试试别的关键字吧!"
+            android:textColor="@android:color/darker_gray" />
+    </RelativeLayout>
+
+</RelativeLayout>

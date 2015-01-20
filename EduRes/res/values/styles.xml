@@ -1,0 +1,104 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+    
+        <style name="MMTabButton">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">@drawable/rb_blue_bg</item>
+        <item name="android:gravity">center</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:button">@null</item>
+		<item name="android:background">@color/transparent</item>
+		<item name="android:paddingTop">4.0dip</item>
+		<item name="android:paddingBottom">4.0dip</item>
+    </style>
+    
+    <!-- 	   搜索结果字体 -->
+	<style name="TextContentSmallStyle">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/default_text</item>
+    </style>
+	<style name="TextTitleBlueStyle">
+        <item name="android:textColor">@color/serchitemtitle_txtcolor</item>
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textColor">@color/default_text</item>
+        <item name="android:textSize">14.0sp</item>
+    </style>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+      
+     <style name="drop_down_list_header_progress_bar_style">
+        <item name="android:minHeight">@dimen/drop_down_list_header_progress_bar_height</item>
+        <item name="android:maxHeight">@dimen/drop_down_list_header_progress_bar_height</item>
+    </style>
+
+    <style name="drop_down_list_footer_progress_bar_style">
+        <item name="android:minHeight">@dimen/drop_down_list_footer_progress_bar_height</item>
+        <item name="android:maxHeight">@dimen/drop_down_list_footer_progress_bar_height</item>
+    </style>
+      <style name="drop_down_list_header_font_style">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+    <style name="drop_down_list_header_second_font_style">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="drop_down_list_footer_font_style">
+         <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="txtbigbuletitle">
+         <item name="android:textColor">@color/blue_title</item>
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+     <style name="txtmiddlebuletitle">
+          <item name="android:textColor">@color/blue_title</item>
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+     </style>
+     <style name="txtsmallbuletitle">
+          <item name="android:textColor">@color/blue_title</item>
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textStyle">bold</item>
+     </style>
+      <style name="txtmiddlecontent">
+        <item name="android:textSize">16.0sp</item>
+      </style>
+      <style name="txtsmallcontent">
+        <item name="android:textSize">14.0sp</item>
+      </style>
+    
+</resources>

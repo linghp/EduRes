@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="15.0dip"
+        android:gravity="center" >
+
+        <ListView
+            android:id="@+id/logininfo_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@drawable/xuxian"
+            android:dividerHeight="1.5dp"
+            android:listSelector="@android:color/transparent"
+            android:padding="3dp"
+            android:persistentDrawingCache="animation|scrolling" >
+        </ListView>
+    </RelativeLayout>
+
+</LinearLayout>

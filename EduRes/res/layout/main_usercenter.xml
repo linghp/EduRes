@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_mine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trans_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+   <include   layout="@layout/title_bar" />
+
+
+    <LinearLayout
+        android:id="@+id/login_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/hellotome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:text="@string/tips_unlogin"
+            android:textColor="@color/textgray"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/main_usercenter_rl"
+            android:gravity="center"
+            android:onClick="login"
+            android:padding="8dp"
+            android:text="登录"
+            android:textColor="@color/default_text"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginsuccess_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:clickable="true"
+        android:onClick="detail"
+        android:visibility="gone"
+         >
+
+        <TextView
+            android:id="@+id/username_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_user"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:text="您好："
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="matrix"
+            android:src="@drawable/mm_submenu_normal" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_usercenter_rl"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:onClick="setting" >
+
+            <TextView
+                android:id="@+id/tv_done_paper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_favor_normal"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="@string/setting"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="matrix"
+                android:src="@drawable/mm_submenu_normal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_usercenter_rl"
+            android:clickable="true"
+            android:layout_marginTop="1dp"
+            android:gravity="center_vertical"
+            android:onClick="downloadmanage" >
+
+            <TextView
+                android:id="@+id/tv_done_paper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_user_down"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="@string/downloadmanage"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="matrix"
+                android:src="@drawable/mm_submenu_normal" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/main_usercenter_rl"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="about" >
+
+            <TextView
+                android:id="@+id/tv_done_paper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_user_about"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="@string/about"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="matrix"
+                android:src="@drawable/mm_submenu_normal" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/logout_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="15.0dip"
+        android:gravity="center" android:visibility="gone">
+
+        <Button
+            android:id="@+id/app_logout_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/logout_btn"
+            android:text="@string/logout"
+            android:textSize="20sp" 
+            android:onClick="logout"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

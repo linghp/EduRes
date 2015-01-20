@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:dlistView="http://schemas.android.com/apk/res/com.cqvip.edures"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_container"
+    android:background="@android:color/white"
+ >
+ 
+      <com.cqvip.edures.widget.DropDownListView
+        android:id="@+id/list_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/gray"
+        android:dividerHeight="1dp"
+        android:isScrollContainer="false"
+        dlistView:isAutoLoadOnBottom="true"
+        dlistView:isOnBottomStyle="true"
+        >
+    </com.cqvip.edures.widget.DropDownListView>
+    
+    <RelativeLayout
+        android:id="@+id/noresult_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/noresult_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/grey" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/noresult_img"
+            android:gravity="center"
+            android:text="没有找到相关结果\n试试别的关键字吧!"
+            android:textColor="@android:color/darker_gray" />
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/loading_probar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/progressbar"
+        android:indeterminateOnly="true"
+        android:visibility="gone" >
+    </ProgressBar>
+
+</RelativeLayout>

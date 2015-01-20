@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <include   layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/layout_username_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="20.0dip"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:padding="20.0dip" >
+
+        <com.cqvip.edures.view.CleanableEditText
+            android:id="@+id/app_login_edit_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_selector"
+            android:hint="@string/login_username"
+            android:imeOptions="actionNext"
+            android:paddingLeft="10.0dip"
+            android:scrollbars="none"
+            android:singleLine="true"
+            android:textColorHint="@color/textgray"
+            android:textSize="16sp" 
+            android:drawableRight="@drawable/ic_clear"
+            android:focusable="true"
+            />
+
+        <com.cqvip.edures.view.CleanableEditText
+            android:id="@+id/app_login_edit_pass"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:background="@drawable/bg_edit_selector"
+            android:hint="@string/login_password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:paddingLeft="10.0dip"
+            android:singleLine="true"
+            android:textColorHint="@color/textgray"
+            android:textSize="16sp" 
+            android:drawableRight="@drawable/ic_clear"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="15.0dip"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/app_login_btn_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_btn"
+            android:text="@string/login_submit" 
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

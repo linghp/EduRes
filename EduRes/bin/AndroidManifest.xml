@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cqvip.edures"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+    
+        <!-- Allows access to the Download Manager -->
+    <permission
+        android:name="com.cqvip.edures.permission.ACCESS_DOWNLOAD_MANAGER"
+        android:description="@string/permdesc_downloadManager"
+        android:label="@string/permlab_downloadManager"
+        android:protectionLevel="normal" />
+
+    <!-- Allows advanced access to the Download Manager -->
+    <permission
+        android:name="com.cqvip.edures.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED"
+        android:description="@string/permdesc_downloadManagerAdvanced"
+        android:label="@string/permlab_downloadManagerAdvanced"
+        android:protectionLevel="normal" />
+
+    <!-- Allows to send broadcasts on download completion -->
+    <permission
+        android:name="com.cqvip.edures.permission.SEND_DOWNLOAD_COMPLETED_INTENTS"
+        android:description="@string/permdesc_downloadCompletedIntent"
+        android:label="@string/permlab_downloadCompletedIntent"
+        android:protectionLevel="normal" />
+    <uses-permission android:name="com.cqvip.edures.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="com.cqvip.edures.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED" />
+    <uses-permission android:name="com.cqvip.edures.permission.SEND_DOWNLOAD_COMPLETED_INTENTS" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.cqvip.edures.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity 
+            android:name="com.cqvip.edures.ui.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+           
+        </activity>
+        <activity
+            android:name="com.cqvip.edures.ui.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity android:name="com.cqvip.edures.ui.SearchActivity" >
+        </activity>
+        <activity android:name="com.cqvip.edures.ui.FragmentHomeActivity" >
+        </activity>
+        <activity android:name="com.cqvip.edures.ui.FragmentHotListActivity" >
+        </activity>
+        <activity android:name="com.cqvip.edures.ui.FragmentNavigationActivity" >
+        </activity>
+        <activity android:name="com.cqvip.edures.ui.FragmentUserActivity" >
+        </activity>
+        <activity android:name="com.cqvip.edures.ui.SearchResultActivity" >
+        </activity>
+        <activity android:name="com.cqvip.edures.ui.DetailActivity" >
+        </activity>
+        <activity android:name="com.cqvip.edures.ui.TechResClassfyActivity" >
+        </activity>
+        <activity android:name="com.cqvip.edures.ui.HotSpecialActivity" >
+        </activity>
+        <activity android:name="com.cqvip.edures.download.DownloadManageActivity" android:launchMode="singleTask">
+        </activity>
+        <activity android:name="com.cqvip.edures.ui.WelcomeActivity" 
+ 			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+
+        <provider
+            android:name="com.mozillaonline.providers.downloads.DownloadProvider"
+            android:authorities="com.cqvip.edures.downloads" />
+
+        <service android:name="com.mozillaonline.providers.downloads.DownloadService" />
+
+        <receiver
+            android:name="com.mozillaonline.providers.downloads.DownloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

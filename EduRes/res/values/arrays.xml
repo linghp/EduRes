@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!-- Used in View -->
+    <string-array name="libname">
+        <item>教师教育学术资源库</item>
+        <item>教育信息导航库</item>
+        <item>中小幼师名家视频库</item>
+        <item>中小幼学科教学资料库</item>
+        <item>教师继续教育项目库</item>
+        <item>中小幼学校名录库</item>
+    </string-array>
+     <string-array name="searchtype">
+        <item>全部字段</item>
+        <item>题名</item>
+        <item>作者</item>
+        <item>关键词</item>
+        <item>摘要</item>
+    </string-array>
+     <string-array name="twotabtitle">
+        <item>热点点击</item>
+        <item>热点专题</item>
+    </string-array>
+     <string-array name="navi_title">
+        <item>中文期刊</item>
+        <item>学位论文</item>
+        <item>会议论文</item>
+        <item>课题研究报告</item>
+        <item>电子图书</item>
+        <item>教育政策</item>
+        <item>教育动态</item>
+        <item>教育人物</item>
+        <item>教学视频</item>
+        <item>教案</item>
+        <item>课件</item>
+        <item>培训项目</item>
+        <item>学校</item>
+    </string-array>
+    
+</resources>

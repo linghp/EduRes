@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/ll_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/main_header_bg"
+        android:gravity="center"
+        android:orientation="horizontal" 
+        android:padding="4dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/searchbar"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_edit_selector"
+            android:gravity="center"
+            android:onClick="onEditTextClick"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/searchbar_left_icon_bg"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text=" 搜索"
+                android:textColor="@color/textgray"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ll_search_bar" >
+
+        <com.cqvip.edures.view.DragGrid
+            android:id="@+id/userGridView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="14dip"
+            android:layout_marginRight="14dip"
+            android:horizontalSpacing="7dip"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="7dp" />
+    </LinearLayout>
+
+</RelativeLayout>
